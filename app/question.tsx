@@ -1,26 +1,26 @@
+// app/question.tsx
 import { Stack, router } from "expo-router";
 import React, { useState } from "react";
 import { Button, StyleSheet, Text, TextInput, View } from "react-native";
 import { useApp } from "./_layout";
 
-const QUESTION = "What emotion are you avoiding today?";
 const MAX = 500;
 
 export default function QuestionRoute() {
   const [text, setText] = useState("");
-  const { addAnswer } = useApp();
+  const { addAnswer, currentQuestion, nextQuestion } = useApp();
   const remaining = MAX - text.length;
   const disabled = text.trim().length === 0 || text.length > MAX;
 
   return (
     <View style={styles.container}>
       <Stack.Screen options={{ title: "Question" }} />
-      <Text style={styles.q}>{QUESTION}</Text>
+      <Text style={styles.q}>{currentQuestion}</Text>
 
       <TextInput
         style={styles.input}
         placeholder="Type your reflection…"
-        placeholderTextColor="rgba(255,255,255,0.7)"
+        placeholderTextColor="rgba(255,255,255,0.9)"  // more transparent
         multiline
         value={text}
         onChangeText={setText}
@@ -36,9 +36,10 @@ export default function QuestionRoute() {
         onPress={() => {
           const v = text.trim();
           if (!v) return;
-          addAnswer(v);
+          addAnswer(v, currentQuestion); // save with question
           setText("");
-          router.replace("/answers");
+          nextQuestion();                // advance to next question for the next time
+          router.replace("/answers");    // go to feed
         }}
       />
     </View>

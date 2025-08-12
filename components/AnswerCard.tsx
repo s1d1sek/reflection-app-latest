@@ -1,3 +1,5 @@
+// components/AnswerCard.tsx
+import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function AnswerCard({
@@ -6,6 +8,7 @@ export default function AnswerCard({
   const initials = author ? author.slice(0,2).toUpperCase() : "AN";
   return (
     <View style={styles.card}>
+      {/* Meta row */}
       <View style={styles.row}>
         <View style={styles.avatar}><Text style={styles.avatarText}>{initials}</Text></View>
         <View style={{ flex: 1 }}>
@@ -14,6 +17,8 @@ export default function AnswerCard({
         </View>
         {tag ? <View style={styles.chip}><Text style={styles.chipText}>{tag}</Text></View> : null}
       </View>
+
+      {/* Content */}
       <Text style={styles.content}>{content}</Text>
     </View>
   );

@@ -1,10 +1,13 @@
 // lib/mock.ts
+import { QUESTIONS } from "../lib/questions";
+
 export type MockAnswer = {
   id: string;
   content: string;
   created_at: string;
   author: string;
   tag: "anxiety" | "grief" | "work" | "family" | "self";
+  question: string;
 };
 
 const names = ["Ava","Noah","Mia","Leo","Zoe","Liam","Aria","Kai","Nora","Eli"];
@@ -30,5 +33,6 @@ export function generateMockAnswers(count = 12): MockAnswer[] {
     created_at: new Date(now - i * 36e5).toISOString(),
     author: names[i % names.length],
     tag: tags[i % tags.length],
+    question: QUESTIONS[i % QUESTIONS.length],
   }));
 }
