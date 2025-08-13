@@ -51,4 +51,14 @@ This project is actively being developed and is a collaboration with the origina
 
 ### Installation
 ```bash
+# Clone the repository
+git clone https://github.com/s1d1sek/reflection-app.git
 
+# Enter the project folder
+cd reflection-app
+
+# Install dependencies
+npm install
+
+# Start the app
+npx expo start
