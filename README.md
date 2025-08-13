@@ -1,50 +1,54 @@
-# Welcome to your Expo app 👋
+# Reflection App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> **An anonymous emotional reflection platform** where users answer thought-provoking questions, see how others feel, and explore emotional awareness — all without personal data or direct messaging.
 
-## Get started
+---
 
-1. Install dependencies
+## 📌 Overview
+Reflection App is a cross-platform (web + mobile) application designed to help users express their thoughts and feelings anonymously. The app presents AI-generated and curated questions, stores responses securely, and displays them on a public wall for shared insight.
 
-   ```bash
-   npm install
-   ```
+This project is actively being developed and is a collaboration with the original idea creators.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🛠 Tech Stack
+- **Frontend:** React Native (Expo)
+- **Backend:** Supabase (PostgreSQL, Auth, Storage)
+- **Languages:** JavaScript
+- **Other Tools:** Git, GitHub, REST APIs
+- **Planned:** AI question generation integration
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## ✨ Current Features
+- Anonymous sign-in
+- AI-curated and manually curated questions
+- Question/answer flow with secure storage
+- Public “Answers Wall” to view community reflections
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🚀 Planned Features
+- AI-generated daily questions
+- Tags & categories for questions
+- Simple reporting/moderation system
+- UI/UX enhancements for mobile and web
+- Deployment to Google Play and App Store
 
-When you're ready, run:
+---
 
+## 📷 Screenshots
+*(Coming soon — will be updated as UI stabilizes)*
+
+---
+
+## 📦 Getting Started
+
+### Prerequisites
+- Node.js & npm
+- Expo CLI
+- Supabase account
+
+### Installation
 ```bash
-npm run reset-project
-```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
